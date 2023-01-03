@@ -1,3 +1,10 @@
+#' Returns a vector of sample documents
+#'
+#' @return A character vector.
+#' @export
+#'
+#' @examples
+#' docs <- zizi1996()
 zizi1996 <- function() {
   # "Moderator: What was the first time you thought about being a father, and what did you think it would be like? Did you have any models or reference points?"
   quotes <- c(
@@ -12,22 +19,29 @@ zizi1996 <- function() {
   return(quotes)
 }
 
+#' Returns a vector of sample documents
+#'
+#' @return A character vector.
+#' @export
+#'
+#' @examples
+#' docs <- becerra2021()
 becerra2021 <- function() {
   quotes <- c(
-    'los beneficios del bigdata en el fútbol son muy reales y se puede realmente conseguir ventaja competitiva con él.',
-    'información en la actualidad es sinónimo de bigdata.',
-    'telefónica dispone de un sistema denominado bigdata que permite, mediante el desplazamiento de los usuarios de celulares dentro del ejido urbano, determinar puntos conflictivos, horarios de mayor movimiento y espacios de mayor circulación.',
-    'se utiliza la tendencia del bigdata - recopilación y utilización de datos para mejorar el rendimiento empresarial -, de forma que podemos conocer en qué falla y en qué es bueno cada usuario que utiliza el simulador.',
-    'la desideologización va de la mano con la bigdata: cuando hay suficientes datos, la teoría sobra.',
-    'los datos obtenidos gracias al bigdata son una valiosa fuente de información para el sector público y para el privado.',
-    'con la analítica de bigdata, más empresas están creando nuevos productos para satisfacer las necesidades puntuales de los clientes.',
+    'los beneficios del bigdata en el futbol son muy reales y se puede realmente conseguir ventaja competitiva.',
+    'informacion en la actualidad es sinonimo de bigdata.',
+    'telefonica dispone de un sistema denominado bigdata que permite, mediante el desplazamiento de los usuarios de celulares dentro del ejido urbano, determinar puntos conflictivos, horarios de mayor movimiento y espacios de mayor circulacion.',
+    'se utiliza la tendencia del bigdata - recopilacion y utilizacion de datos para mejorar el rendimiento empresarial -, de forma que podemos conocer en que falla y en que es bueno cada usuario que utiliza el simulador.',
+    'la desideologizacion va de la mano con la bigdata: cuando hay suficientes datos, la teoria sobra.',
+    'los datos obtenidos gracias al bigdata son una valiosa fuente de informacion para el sector publico y para el privado.',
+    'con la analitica de bigdata, mas empresas estan creando nuevos productos para satisfacer las necesidades puntuales de los clientes.',
     'hay una gran amenaza a la intimidad con el bigdata.',
-    'la combinación de bigdata y estrategias de miedo es muy peligrosa: la persecución selectiva muchas veces usa la herramienta de la discriminación.',
-    'a pesar de presentar al bigdata en su aspecto más positivo y revolucionario para la humanidad, los autores señalan los peligros a los que nos puede conducir una dictadura de los datos.',
-    'quien se deja engañar por bigdata puede creer que comprar bufandas o camperas causa frío.',
-    'el acceso indiscriminado a datos personales podría crear también problemas serios a víctimas de violencia o de conflictos, lo que exige garantizar un uso adecuado de todo este potencial del bigdata.',
-    'el bigdata también tiene una connotación más oscura en su condición de primo lingüístico de big brother, big oil y big government.',
-    'el inminente avance de las denominadas tecnologías de la información y la comunicación, la inteligencia artificial, robótica y el bigdata resucitan en los trabajadores temores.'
+    'la combinacion de bigdata y estrategias de miedo es muy peligrosa: la persecucion selectiva muchas veces usa la herramienta de la discriminacion.',
+    'a pesar de presentar al bigdata en su aspecto mas positivo y revolucionario para la humanidad, los autores senalan los peligros a los que nos puede conducir una dictadura de los datos.',
+    'quien se deja enganar por bigdata puede creer que comprar bufandas o camperas causa frio.',
+    'el acceso indiscriminado a datos personales podria crear tambien problemas serios a victimas de violencia o de conflictos, lo que exige garantizar un uso adecuado de todo este potencial del bigdata.',
+    'el bigdata tambien tiene una connotacion mas oscura en su condicion de primo lingüistico de big brother, big oil y big government.',
+    'el inminente avance de las denominadas tecnologias de la informacion y la comunicacion, la inteligencia artificial, robotica y el bigdata resucitan en los trabajadores temores.'
   )
   message("Source: Argentinian newspaper corpus on big data. Available in https://bookdown.org/gaston_becerra/curso-intro-r/clasificar-automaticamente.html");
   return(quotes)
