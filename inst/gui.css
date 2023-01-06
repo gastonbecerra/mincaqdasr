@@ -1,0 +1,300 @@
+body {
+    /* background-color: black; */
+}
+
+#title {
+    /* color: white; */
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#documents , #fragments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fragment_navigation_item { 
+    /* .document_navigation_item */
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px black;
+    background-color: white;
+    height: 30px;
+    width: 300px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#annotate_panes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#annotate_fragment , #documents_panel , #documents_viewer_panel, #codebook_panel {
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px black;
+    background-color: lightgrey;
+}
+
+#documents_panel {
+    max-height: 20em;
+    overflow: auto;
+}
+
+#annotate_document {
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+#annotate_fragment {
+    width: 100%;
+}
+
+#annotate_document > textarea , #annotate_fragment > textarea {
+    /* width: 100%; */
+}
+
+#document_code_navigation , #document_code_item_automatics , #fragment_code_navigation , 
+#fragment_code_item_automatics , #create_fragment_navigation,
+#delete_fragment_wraper {
+    display: flex;
+    flex-direction: row;    
+    justify-content: center;
+}
+
+#fragments_navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.document_code_item , .document_code_item_automatic ,
+.fragment_code_item , #create_fragment_button ,  .fragment_code_item_automatic , 
+.export-button, 
+#delete_fragment_button {
+    /*
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px black;
+    background-color: lightgrey;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    */
+}
+
+.document_code_item , .document_code_item_automatic ,
+.fragment_code_item , #create_fragment_button ,  .fragment_code_item_automatic , 
+.code_item_automatic {
+    padding: 5px;
+    margin: 10px;
+    border: solid 1px green;
+    background-color: white;
+    height: 30px;
+    max-width: 200px;
+    color: green;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.document_code_label {
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px red;
+    background-color: white;
+    height: 30px;
+    max-width: 100px;
+    color: red;
+    size: 75%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.fragment_code_label {
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px gray;
+    height: 30px;
+    max-width: 100px;
+    size: 75%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#delete_fragment_button {
+        padding: 5px;
+    margin: 5px;
+    border: solid 1px red;
+    background-color: white;
+    height: 30px;
+    max-width: 100px;
+    color: red;
+    size: 75%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.selected_item {
+    background-color: lightblue !important;
+}
+
+.selected_item_fragment , .selected_item_document {
+    font-weight: bold;
+}
+
+#document_viewer , #document_viewer2 {
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px black;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#document_fragment_codes {
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px black;
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+#dump {
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px black;
+    background-color: rgb(250, 215, 237);
+}
+
+#dump_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}
+
+
+#dump_output {
+    font-size: smaller;
+    font-family: 'Courier New', Courier, monospace;
+    max-height: 400px;
+    overflow: auto;
+    text-align: unset;
+}
+
+.export-button {
+    max-width: 200px;
+}
+
+#file-input {
+    display: none;
+}
+
+character_annotation {
+}
+
+.fragment_start {
+    border-left: solid 1px gray;
+}
+
+.fragment_end {
+    border-right: solid 1px gray;
+}
+
+.fragment {
+    border-top: solid 1px gray;
+    border-bottom: solid 1px gray;
+}
+
+.selected_fragment{
+    border-bottom: solid 3px black;
+    font-weight: bolder;
+    -webkit-animation: target-fade 3s 1;
+    -moz-animation: target-fade 3s 1;
+}
+
+@-webkit-keyframes target-fade {    
+    0% { color: red ; font-weight: normal; }
+    100% { color: black ; font-weight: bolder; }
+}
+@-moz-keyframes target-fade {
+    0% { color: red ; font-weight: normal; }
+    100% { color: black ; font-weight: bolder; }
+}
+
+#document_memo , .fragment_memo {
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px gray;
+    cursor: pointer;
+    transition: width 0.5s linear 0.5s, height 0.5s linear 0.5s;
+    width: 250px;
+    height: 30px;
+    overflow: hidden;
+    font-size: 75%;
+}
+#document_memo:hover , .fragment_memo:hover {
+    background-color: white;
+    font-size: 100%;
+    width: 400px;
+    height: 400px;    
+    
+    /* 2do: set in the center of the screen */
+    /* position: absolute;
+    z-index: 100;
+    left: 50%;
+    top: 50%; */
+
+}
+
+.fragments_item {
+    padding: 5px;
+}
+
+.codebook_target {
+    background-color: lightblue;
+}
+
+#documents_panel_list {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+}
+
+.document_navigation_i{
+    margin: -30px auto auto;
+    line-height: 50px;
+    font-size: 40px;
+    color: darkgray;
+    text-align: center;
+}
+
+.document_navigation_item {
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px black;
+    background-color: white;
+    height: 120px;
+    min-width: 120px;
+    cursor: pointer;
+}
+
+.document_navigation_snippet{
+    margin: 0 auto auto 0;
+    font-size: 11px;
+}
+
+.selected_item_document {
+    background-color: antiquewhite !important;
+}
+
+#codebook_code_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
