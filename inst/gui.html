@@ -3,13 +3,13 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="mincoder-gui.css">
-    <script src="mincoder-gui.js"></script>
+    <link rel="stylesheet" href="gui.css">
+    <script src="gui.js"></script>
 </head>
 <body>
-    
+
     <script>
-            
+
             var data_from_R = {
                 "documents":
                     ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis risus libero. Maecenas accumsan scelerisque blandit. Duis fringilla lorem scelerisque, porttitor lorem eu, tempor magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vehicula condimentum venenatis. Praesent sed interdum felis, id pellentesque libero. Donec dolor nibh, aliquam at nisi in, semper feugiat felis. Vestibulum molestie aliquet metus, ut venenatis ante auctor sed. Sed vel malesuada eros. Vestibulum malesuada volutpat luctus. Donec dapibus tellus erat. Pellentesque eu neque felis. Aliquam tincidunt magna eu sollicitudin cursus.",
@@ -22,15 +22,17 @@
                 "fragments_annotations":[]
             }
 
+            /*
             var data_from_R = {
                 "documents": [],
                 "codes": [],
                 "documents_annotations":[],
                 "fragments_annotations":[]
             }
+            */
 
         read_input_data(data_from_R);
-        set_variables( annotation_user = "gaston" );
+        set_variables( annotation_user = "default_user" );
 
         $(document).ready(function() {
             draw_front();

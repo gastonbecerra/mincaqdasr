@@ -1,60 +1,118 @@
 
+#' Get codes from mincaqdasr data list
+#'
+#' @param x A data list created with mincaqdasr GUI (exported as .json)
+#'
+#' @return A tibble
+#' @export
+#'
+#' @examples
+#' get_codes( mincaqdasr::sample_haitian_fathers_annotated )
 get_codes <- function( x ) {
-  y <- tibble(
+  y <- tibble::tibble(
     code = x$codes
-  ) %>% mutate(
-    code_id = row_number() - 1
-  ) %>% select(code_id , code)
+  ) %>% dplyr::mutate(
+    code_id = dplyr::row_number() - 1
+  ) %>% dplyr::select(code_id , code)
   return(y)
 }
 
-# get documents as dataframe
+
+#' Get documents from mincaqdasr data list
+#'
+#' @param x A data list created with mincaqdasr GUI (exported as .json)
+#'
+#' @return A tibble
+#' @export
+#'
+#' @examples
+#' get_documents( mincaqdasr::sample_big_data_annotated )
 get_documents <- function( x ) {
-  y <- tibble(
+  y <- tibble::tibble(
     document = x$documents
-  ) %>% mutate(
-    document_id = row_number() - 1
-  ) %>% select(document_id , document)
+  ) %>% dplyr::mutate(
+    document_id = dplyr::row_number() - 1
+  ) %>% dplyr::select(document_id , document)
   return(y)
 }
 
-# get fragments as dataframe
+#' Get fragments from mincaqdasr data list
+#'
+#' @param x A data list created with mincaqdasr GUI (exported as .json)
+#'
+#' @return A tibble
+#' @export
+#'
+#' @examples
+#' get_fragments( mincaqdasr::sample_haitian_fathers_annotated )
 get_fragments <- function( x ) {
-  y <- tibble(
+  # 2do: hay que exportar las otras anotaciones
+  y <- tibble::tibble(
     fragment_id = x$fragments_annotations[['id']],
     fragment = x$fragments_annotations[['text']]
   )
   return(y)
 }
 
-# get document annotations as dataframe
+#' Get document annotations from mincaqdasr data list
+#'
+#' @param x A data list created with mincaqdasr GUI (exported as .json)
+#'
+#' @return A tibble
+#' @export
+#'
+#' @examples
+#' get_documents_annotations( mincaqdasr::sample_big_data_annotated )
 get_documents_annotations <- function( x ) {
-  y <- x$documents_annotations %>% unnest(cols = c(codes)) %>%
-    rename(document_id = document) %>%
-    rename(code_id = codes ) %>%
-    left_join( get_documents(x) , by = 'document_id' ) %>%
-    left_join( get_codes(x) , by = 'code_id' ) %>%
-    select( document_id , document , code_id , code ,
+  # 2do: hay que chequear si el json no tiene anotaciones de documentos...
+  # mincaqdasr::get_documents_annotations( mincaqdasr::sample_haitian_fathers_annotated )
+  y <- x$documents_annotations %>%
+    tidyr::unnest(cols = c(codes)) %>%
+    dplyr::rename(document_id = document) %>%
+    dplyr::rename(code_id = codes ) %>%
+    dplyr::left_join( mincaqdasr::get_documents(x) , by = 'document_id' ) %>%
+    dplyr::left_join( mincaqdasr::get_codes(x) , by = 'code_id' ) %>%
+    dplyr::select( document_id , document , code_id , code ,
             memo , annotation_update , annotation_user)
   return(y)
 }
 
-# get fragment annotations as dataframe
+
+#' Get fragment annotations from mincaqdasr data list
+#'
+#' @param x A data list created with mincaqdasr GUI (exported as .json)
+#'
+#' @return A tibble
+#' @export
+#'
+#' @examples
+#' get_fragments_annotations( mincaqdasr::sample_haitian_fathers_annotated )
 get_fragments_annotations <- function( x ) {
   y <- x$fragments_annotations %>%
-    unnest(cols = c(codes)) %>%
-    rename(fragment_id = id) %>%
-    rename(code_id = codes ) %>%
-    left_join( get_fragments(x) , by = 'fragment_id' ) %>%
-    left_join( get_codes(x) , by = 'code_id' ) %>%
-    select( fragment_id , fragment , code_id , code ,
+    tidyr::unnest(cols = c(codes)) %>%
+    dplyr::rename(fragment_id = id) %>%
+    dplyr::rename(code_id = codes ) %>%
+    dplyr::left_join( mincaqdasr::get_fragments(x) , by = 'fragment_id' ) %>%
+    dplyr::left_join( mincaqdasr::get_codes(x) , by = 'code_id' ) %>%
+    dplyr::select( fragment_id , fragment , code_id , code ,
             document_id = document ,
             start, end,
             memo , annotation_update , annotation_user)
   return(y)
 }
 
+#' Merge documents, codes and annotations from 2 mincaqdasr data lists
+#'
+#' @param x A data list created with mincaqdasr GUI (exported as .json)
+#' @param y A data list created with mincaqdasr GUI (exported as .json)
+#'
+#' @return A mincaqdasr data list
+#' @export
+#'
+#' @examples
+#' a = a
 merge_jsons <- function( x , y ) {
+  # 2do: hay que chequear que haya contenido, e.g., tomando anotaciones de fragmentos en sample_big_data
   # sin reemplazar, pero ajustnado los indices
   # com reemplazo, habría que mergear comentarios
   base_doc = length(x$documents)
@@ -66,7 +124,7 @@ merge_jsons <- function( x , y ) {
                                    annotation_update = y$documents_annotations$annotation_update,
                                    annotation_user = y$documents_annotations$annotation_user) %>%
     as.data.frame() %>%
-    mutate(document = as.integer(document) ,
+    dplyr::mutate(document = as.integer(document) ,
            memo = as.character(memo) ,
            annotation_update = as.character(annotation_update) ,
            annotation_user = as.character(annotation_user) )
@@ -81,7 +139,7 @@ merge_jsons <- function( x , y ) {
     annotation_update = y$fragments_annotations$annotation_update,
     annotation_user = y$fragments_annotations$annotation_user) %>%
     as.data.frame() %>%
-    mutate(document = as.integer(document) ,
+    dplyr::mutate(document = as.integer(document) ,
            id = as.character(id) ,
            text = as.character(text) ,
            start = as.integer(start) ,

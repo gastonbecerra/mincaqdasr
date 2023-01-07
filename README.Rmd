@@ -20,6 +20,10 @@ knitr::opts_chunk$set(
 
 The goal of mincaqdasr is to ...
 
+mincaqdasr contiene 2 tipos de funciones:
+- una función que inicia el GUI
+- funciones para manipular el .json que se genera a través del GUI
+
 ## Installation
 
 You can install the development version of mincaqdasr from [GitHub](https://github.com/) with:

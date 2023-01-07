@@ -26,10 +26,14 @@ sample_big_data <- c(
 )
 usethis::use_data(sample_big_data, overwrite = TRUE)
 
-sample_big_data_annotated <- jsonlite::read_json(system.file("./sample_big_data_annotated.json", package = "mincaqdasr"))
+sample_big_data_annotated <- jsonlite::read_json(
+  path = system.file("./sample_big_data_annotated.json", package = "mincaqdasr"),
+  simplifyVector = TRUE)
 usethis::use_data(sample_big_data_annotated, overwrite = TRUE)
 
-sample_haitian_fathers_annotated <- jsonlite::read_json(system.file("./sample_haitian_fathers_annotated.json", package = "mincaqdasr"))
+sample_haitian_fathers_annotated <- jsonlite::read_json(
+  path = system.file("./sample_haitian_fathers_annotated.json", package = "mincaqdasr"),
+  simplifyVector = TRUE)
 usethis::use_data(sample_haitian_fathers_annotated, overwrite = TRUE)
 
 # 2do: close connections
