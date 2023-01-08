@@ -18,5 +18,7 @@ A mincaqdasr data list
 Merge documents, codes and annotations from 2 mincaqdasr data lists
 }
 \examples{
-a = a
+x = mincaqdasr::sample_big_data_annotated
+y = mincaqdasr::sample_haitian_fathers_annotated
+merge_jsons(x,y)
 }

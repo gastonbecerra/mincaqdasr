@@ -9,6 +9,7 @@
 #' @examples
 #' get_codes( mincaqdasr::sample_haitian_fathers_annotated )
 get_codes <- function( x ) {
+  code_id <- code <- NULL # NSE
   y <- tibble::tibble(
     code = x$codes
   ) %>% dplyr::mutate(
@@ -28,6 +29,7 @@ get_codes <- function( x ) {
 #' @examples
 #' get_documents( mincaqdasr::sample_big_data_annotated )
 get_documents <- function( x ) {
+  document <- document_id <- NULL # NSE
   y <- tibble::tibble(
     document = x$documents
   ) %>% dplyr::mutate(
@@ -66,6 +68,7 @@ get_fragments <- function( x ) {
 get_documents_annotations <- function( x ) {
   # 2do: hay que chequear si el json no tiene anotaciones de documentos...
   # mincaqdasr::get_documents_annotations( mincaqdasr::sample_haitian_fathers_annotated )
+  code <- codes <- document <- document_id <- document <- code_id <- memo <- annotation_update <- annotation_user <- NULL # NSE
   y <- x$documents_annotations %>%
     tidyr::unnest(cols = c(codes)) %>%
     dplyr::rename(document_id = document) %>%
@@ -88,6 +91,8 @@ get_documents_annotations <- function( x ) {
 #' @examples
 #' get_fragments_annotations( mincaqdasr::sample_haitian_fathers_annotated )
 get_fragments_annotations <- function( x ) {
+  codes <- id <- fragment_id <- fragment <- code_id <- code <- document_id <- document <-
+    start <- end <- memo <- annotation_update <- annotation_user <- NULL # NSE
   y <- x$fragments_annotations %>%
     tidyr::unnest(cols = c(codes)) %>%
     dplyr::rename(fragment_id = id) %>%
@@ -110,11 +115,14 @@ get_fragments_annotations <- function( x ) {
 #' @export
 #'
 #' @examples
-#' a = a
+#' x = mincaqdasr::sample_big_data_annotated
+#' y = mincaqdasr::sample_haitian_fathers_annotated
+#' merge_jsons(x,y)
 merge_jsons <- function( x , y ) {
   # 2do: hay que chequear que haya contenido, e.g., tomando anotaciones de fragmentos en sample_big_data
   # sin reemplazar, pero ajustnado los indices
   # com reemplazo, habría que mergear comentarios
+  document <- memo <- annotation_update <- annotation_user <- id <- text <- start <- end <- NULL # NSE
   base_doc = length(x$documents)
   base_codes = length(x$codes)
   mas_indice <- function(indice , base) { return(indice+base) }

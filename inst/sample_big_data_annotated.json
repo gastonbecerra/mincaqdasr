@@ -1,1 +1,151 @@
-{"documents":["los beneficios del bigdata en el fútbol son muy reales y se puede realmente conseguir ventaja competitiva con él.","información en la actualidad es sinónimo de bigdata.","telefónica dispone de un sistema denominado bigdata que permite, mediante el desplazamiento de los usuarios de celulares dentro del ejido urbano, determinar puntos conflictivos, horarios de mayor movimiento y espacios de mayor circulación.","se utiliza la tendencia del bigdata - recopilación y utilización de datos para mejorar el rendimiento empresarial -, de forma que podemos conocer en qué falla y en qué es bueno cada usuario que utiliza el simulador.","la desideologización va de la mano con la bigdata: cuando hay suficientes datos, la teoría sobra.","los datos obtenidos gracias al bigdata son una valiosa fuente de información para el sector público y para el privado.","con la analítica de bigdata, más empresas están creando nuevos productos para satisfacer las necesidades puntuales de los clientes.","hay una gran amenaza a la intimidad con el bigdata.","la combinación de bigdata y estrategias de miedo es muy peligrosa: la persecución selectiva muchas veces usa la herramienta de la discriminación.","a pesar de presentar al bigdata en su aspecto más positivo y revolucionario para la humanidad, los autores señalan los peligros a los que nos puede conducir una dictadura de los datos.","quien se deja engañar por bigdata puede creer que comprar bufandas o camperas causa frío.","el acceso indiscriminado a datos personales podría crear también problemas serios a víctimas de violencia o de conflictos, lo que exige garantizar un uso adecuado de todo este potencial del bigdata.","el bigdata también tiene una connotación más oscura en su condición de primo lingüístico de big brother, big oil y big government.","el inminente avance de las denominadas tecnologías de la información y la comunicación, la inteligencia artificial, robótica y el bigdata resucitan en los trabajadores temores."],"codes":["positivo","negativo"],"documents_annotations":[{"document":0,"codes":[0],"memo":"","annotation_update":"2023-01-03T06:07:56.317Z","annotation_user":"default_user"},{"document":1,"codes":[0],"memo":"","annotation_update":"2023-01-03T06:08:04.326Z","annotation_user":"default_user"},{"document":2,"codes":[0],"memo":"","annotation_update":"2023-01-03T06:08:06.470Z","annotation_user":"default_user"},{"document":3,"codes":[0],"memo":"","annotation_update":"2023-01-03T06:08:08.288Z","annotation_user":"default_user"},{"document":4,"codes":[0],"memo":"","annotation_update":"2023-01-03T06:08:10.160Z","annotation_user":"default_user"},{"document":5,"codes":[0],"memo":"","annotation_update":"2023-01-03T06:08:12.448Z","annotation_user":"default_user"},{"document":6,"codes":[0],"memo":"","annotation_update":"2023-01-03T06:08:15.197Z","annotation_user":"default_user"},{"document":7,"codes":[1],"memo":"","annotation_update":"2023-01-03T06:08:21.278Z","annotation_user":"default_user"},{"document":8,"codes":[1],"memo":"","annotation_update":"2023-01-03T06:08:30.240Z","annotation_user":"default_user"},{"document":9,"codes":[1],"memo":"","annotation_update":"2023-01-03T06:08:32.436Z","annotation_user":"default_user"},{"document":10,"codes":[1],"memo":"","annotation_update":"2023-01-03T06:08:34.450Z","annotation_user":"default_user"},{"document":11,"codes":[1],"memo":"","annotation_update":"2023-01-03T06:08:36.777Z","annotation_user":"default_user"},{"document":12,"codes":[1],"memo":"","annotation_update":"2023-01-03T06:08:40.165Z","annotation_user":"default_user"},{"document":13,"codes":[1],"memo":"","annotation_update":"2023-01-03T06:08:43.027Z","annotation_user":"default_user"}],"fragments_annotations":[]}
+{
+    "documents": [
+        "los beneficios del bigdata en el fútbol son muy reales y se puede realmente conseguir ventaja competitiva con él.",
+        "información en la actualidad es sinónimo de bigdata.",
+        "telefónica dispone de un sistema denominado bigdata que permite, mediante el desplazamiento de los usuarios de celulares dentro del ejido urbano, determinar puntos conflictivos, horarios de mayor movimiento y espacios de mayor circulación.",
+        "se utiliza la tendencia del bigdata - recopilación y utilización de datos para mejorar el rendimiento empresarial -, de forma que podemos conocer en qué falla y en qué es bueno cada usuario que utiliza el simulador.",
+        "la desideologización va de la mano con la bigdata: cuando hay suficientes datos, la teoría sobra.",
+        "los datos obtenidos gracias al bigdata son una valiosa fuente de información para el sector público y para el privado.",
+        "con la analítica de bigdata, más empresas están creando nuevos productos para satisfacer las necesidades puntuales de los clientes.",
+        "hay una gran amenaza a la intimidad con el bigdata.",
+        "la combinación de bigdata y estrategias de miedo es muy peligrosa: la persecución selectiva muchas veces usa la herramienta de la discriminación.",
+        "a pesar de presentar al bigdata en su aspecto más positivo y revolucionario para la humanidad, los autores señalan los peligros a los que nos puede conducir una dictadura de los datos.",
+        "quien se deja engañar por bigdata puede creer que comprar bufandas o camperas causa frío.",
+        "el acceso indiscriminado a datos personales podría crear también problemas serios a víctimas de violencia o de conflictos, lo que exige garantizar un uso adecuado de todo este potencial del bigdata.",
+        "el bigdata también tiene una connotación más oscura en su condición de primo lingüístico de big brother, big oil y big government.",
+        "el inminente avance de las denominadas tecnologías de la información y la comunicación, la inteligencia artificial, robótica y el bigdata resucitan en los trabajadores temores."
+    ],
+    "codes": [
+        "positivo",
+        "negativo"
+    ],
+    "documents_annotations": [
+        {
+            "document": 0,
+            "codes": [
+                0
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:07:56.317Z",
+            "annotation_user": "default_user"
+        },
+        {
+            "document": 1,
+            "codes": [
+                0
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:08:04.326Z",
+            "annotation_user": "default_user"
+        },
+        {
+            "document": 2,
+            "codes": [
+                0
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:08:06.470Z",
+            "annotation_user": "default_user"
+        },
+        {
+            "document": 3,
+            "codes": [
+                0
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:08:08.288Z",
+            "annotation_user": "default_user"
+        },
+        {
+            "document": 4,
+            "codes": [
+                0
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:08:10.160Z",
+            "annotation_user": "default_user"
+        },
+        {
+            "document": 5,
+            "codes": [
+                0
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:08:12.448Z",
+            "annotation_user": "default_user"
+        },
+        {
+            "document": 6,
+            "codes": [
+                0
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:08:15.197Z",
+            "annotation_user": "default_user"
+        },
+        {
+            "document": 7,
+            "codes": [
+                1
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:08:21.278Z",
+            "annotation_user": "default_user"
+        },
+        {
+            "document": 8,
+            "codes": [
+                1
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:08:30.240Z",
+            "annotation_user": "default_user"
+        },
+        {
+            "document": 9,
+            "codes": [
+                1
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:08:32.436Z",
+            "annotation_user": "default_user"
+        },
+        {
+            "document": 10,
+            "codes": [
+                1
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:08:34.450Z",
+            "annotation_user": "default_user"
+        },
+        {
+            "document": 11,
+            "codes": [
+                1
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:08:36.777Z",
+            "annotation_user": "default_user"
+        },
+        {
+            "document": 12,
+            "codes": [
+                1
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:08:40.165Z",
+            "annotation_user": "default_user"
+        },
+        {
+            "document": 13,
+            "codes": [
+                1
+            ],
+            "memo": "",
+            "annotation_update": "2023-01-03T06:08:43.027Z",
+            "annotation_user": "default_user"
+        }
+    ],
+    "fragments_annotations": []
+}
