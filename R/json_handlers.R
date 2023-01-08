@@ -91,6 +91,10 @@ get_documents_annotations <- function( x ) {
 #' @examples
 #' get_fragments_annotations( mincaqdasr::sample_haitian_fathers_annotated )
 get_fragments_annotations <- function( x ) {
+
+  # 2do: hay que pivotear para la tabla sea tidy, y no haya nested elements
+  # 2do: o al menos que sea parametro dejar las cosas como nested
+
   codes <- id <- fragment_id <- fragment <- code_id <- code <- document_id <- document <-
     start <- end <- memo <- annotation_update <- annotation_user <- NULL # NSE
   y <- x$fragments_annotations %>%
@@ -119,7 +123,9 @@ get_fragments_annotations <- function( x ) {
 #' y = mincaqdasr::sample_haitian_fathers_annotated
 #' merge_jsons(x,y)
 merge_jsons <- function( x , y ) {
+
   # 2do: hay que chequear que haya contenido, e.g., tomando anotaciones de fragmentos en sample_big_data
+
   # sin reemplazar, pero ajustnado los indices
   # com reemplazo, habría que mergear comentarios
   document <- memo <- annotation_update <- annotation_user <- id <- text <- start <- end <- NULL # NSE

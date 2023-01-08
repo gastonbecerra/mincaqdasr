@@ -1,11 +1,3 @@
-test_that("sample data loads 1", {
-  expect_type(sample_big_data, "character")
-})
-
-test_that("sample data loads 2", {
-  expect_type(sample_haitian_fathers, "character")
-})
-
 test_that("sample data loads 3", {
   expect_type(sample_haitian_fathers_annotated, "list")
 })
@@ -49,4 +41,3 @@ test_that("get_fragments_annotations returning a non empty tibble", {
   expect_true(mincaqdasr::get_fragments_annotations( mincaqdasr::sample_haitian_fathers_annotated ) %>% tibble::is_tibble())
   expect_true(mincaqdasr::get_fragments_annotations( mincaqdasr::sample_haitian_fathers_annotated ) %>% nrow() > 1)
 })
-

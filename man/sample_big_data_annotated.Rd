@@ -3,7 +3,7 @@
 \docType{data}
 \name{sample_big_data_annotated}
 \alias{sample_big_data_annotated}
-\title{Fragments of interviews about fatherhood}
+\title{Fragments of news about big data}
 \format{
 A list with 4 elements
 \describe{

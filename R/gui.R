@@ -21,6 +21,8 @@
 #' }
 start_gui <- function( input = FALSE, docs = FALSE, codes = FALSE, show_monitor = FALSE, annotation_user = 'default_user') {
 
+  # 2do: para esto no necesitamos shinyapp
+
   json_input <- blank_input_list()
 
   if (is.list(input)) {
@@ -52,9 +54,8 @@ start_gui <- function( input = FALSE, docs = FALSE, codes = FALSE, show_monitor 
   )
   server <- function(input, output, session) {
     shinyjs::runjs(paste0("$(document).ready(function() {
-                var data_from_R = " , json_input , ";
-                /* console.log(data_from_R); */
-                read_input_data(data_from_R);
+                var input_data = " , json_input , ";
+                read_input_data(input_data);
                 set_variables( show_monitor = false , annotation_user = '" , annotation_user , "' );
                 draw_front();
             });"))

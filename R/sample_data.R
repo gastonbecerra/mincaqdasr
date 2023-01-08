@@ -1,30 +1,8 @@
 #' Fragments of interviews about fatherhood
 #'
-#' Annotated/analyzed in sample_haitian_fathers_annotated
-#'
-#' @format ## `sample_haitian_fathers`
-#' A character vector with 6 elements
-#' @source #' Zizi, 1996, p. 170, 221. (Haitian Father Data). Quoted and analyzed in Auerbach, C., & Silverstein, L. B. (2003). Qualitative data: an introduction to coding and analysis. New York University Press. p. 49-53
-"sample_haitian_fathers"
-
-#' Fragments of interviews about fatherhood
-#'
 #' Annotated/analyzed corpus of documents
 #'
 #' @format ## `sample_haitian_fathers`
-#' A character vector with 6 elements
-#' @source #' Zizi, 1996, p. 170, 221. (Haitian Father Data). Quoted and analyzed in Auerbach, C., & Silverstein, L. B. (2003). Qualitative data: an introduction to coding and analysis. New York University Press. p. 49-53
-"sample_haitian_fathers_annotated"
-
-
-
-#' Fragments of Argentina newspaper articles on big data
-#'
-#' Annotated/analyzed in sample_big_data_annotated
-#'
-#' Source: Argentinian newspaper corpus on big data.
-#'
-#' @format A character vector with 14 elements
 #' A list with 4 elements
 #' \describe{
 #'   \item{documents}{Character vector with document}
@@ -46,10 +24,10 @@
 #'   \item{fragments_annotation$annotation_update}{A character string with the timestamp of the last change}
 #'   \item{fragments_annotation$annotation_user}{A character string with the username}#'
 #' }
-#' @source <https://bookdown.org/gaston_becerra/curso-intro-r/clasificar-automaticamente.html>
-"sample_big_data"
+#' @source #' Zizi, 1996, p. 170, 221. (Haitian Father Data). Quoted and analyzed in Auerbach, C., & Silverstein, L. B. (2003). Qualitative data: an introduction to coding and analysis. New York University Press. p. 49-53
+"sample_haitian_fathers_annotated"
 
-#' Fragments of interviews about fatherhood
+#' Fragments of news about big data
 #'
 #' Annotated/analyzed corpus of documents
 #'
@@ -76,7 +54,6 @@
 #' }
 #' @source #' https://bookdown.org/gaston_becerra/curso-intro-r/clasificar-automaticamente.html
 "sample_big_data_annotated"
-
 
 blank_input_list <- function () {
   return(
