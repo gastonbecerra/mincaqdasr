@@ -113,11 +113,13 @@ a ver en nuestra consola un mensaje tipo
 trabajar con el GUI *debemos cerrar este proceso para poder seguir
 usando R*.
 
-    > You can stop the app and return access to the console using any one of these options:
+> You can stop the app and return access to the console using any one of
+> these options:
 
-    > * Click the stop sign icon on the R console toolbar.
-    > * Click on the console, then press Esc (or press Ctrl + C if you’re not using RStudio).
-    > * Close the Shiny app window.
+> - Click the stop sign icon on the R console toolbar.
+> - Click on the console, then press Esc (or press Ctrl + C if you’re
+>   not using RStudio).
+> - Close the Shiny app window.
 
 Más info sobre esto acá:
 <https://mastering-shiny.org/basic-app.html#running>

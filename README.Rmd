@@ -75,11 +75,11 @@ Cuando llamamos a `mincaqdasr::start_gui()` estamos abriendo un `.html` adentro 
 
 Esto significa que R queda "escuchando" la *shinyapp* de modo que vamos a ver en nuestra consola un mensaje tipo `Listening on http://127.0.0.1:7654`. Una vez que hayamos terminado de trabajar con el GUI *debemos cerrar este proceso para poder seguir usando R*. 
 
-    > You can stop the app and return access to the console using any one of these options:
-    
-    > * Click the stop sign icon on the R console toolbar.
-    > * Click on the console, then press Esc (or press Ctrl + C if you’re not using RStudio).
-    > * Close the Shiny app window.
+> You can stop the app and return access to the console using any one of these options:
+
+> * Click the stop sign icon on the R console toolbar.
+> * Click on the console, then press Esc (or press Ctrl + C if you’re not using RStudio).
+> * Close the Shiny app window.
 
 Más info sobre esto acá: <https://mastering-shiny.org/basic-app.html#running>
 
