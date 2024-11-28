@@ -4,11 +4,11 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Gastón", "Becerra", , "gaston.becerra@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9432-8848"))
-Description: What the package does (one paragraph).
+Description: mincaqdasr is a tool for qualitative analysis (CAQDAS) designed specifically for coding or annotating a corpus of documents through a user-friendly GUI that runs on any JavaScript-enabled web browser.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
