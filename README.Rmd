@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # mincaqdasr
 
 <!-- badges: start -->
+![R-CMD-check](https://github.com/gastonbecerra/mincaqdasr/actions/workflows/r-check.yml/badge.svg)
 <!-- badges: end -->
 
 mincaqdasr es un herramienta para análisis cualitativo (CAQDAS), particularmente para la tarea de **codificar o anotar un corpus de documentos o fragmentos de los mismos**, a través de una interfaz gráfica (GUI) que corre en cualquier navegador que tenga JavaScript habilitado.

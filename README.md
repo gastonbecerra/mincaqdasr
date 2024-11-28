@@ -4,6 +4,8 @@
 # mincaqdasr
 
 <!-- badges: start -->
+
+![R-CMD-check](https://github.com/gastonbecerra/mincaqdasr/actions/workflows/r-check.yml/badge.svg)
 <!-- badges: end -->
 
 mincaqdasr es un herramienta para análisis cualitativo (CAQDAS),
