@@ -33,7 +33,37 @@ También se incluyen varias funciones de R para manipular el `.json` generado co
 
 El GUI también se puede usar sin R [Ver Usar GUI sin R](#usar-gui-sin-r)
 
-# Estructura de datos
+
+## Usar mincaqdasr en R
+
+Se puede instalar desde [GitHub](https://github.com/):
+
+``` r
+# install.packages("devtools")
+devtools::install_github("gastonbecerra/mincaqdasr")
+```
+
+Cuando llamamos a `mincaqdasr::start_gui()` estamos abriendo un `.html` adentro de una *shinyapp* (no es la mejor implementación, pero es rápida; lo mejor sería abrir el navegador sin llamar una shinyapp). 
+
+Esto significa que R queda "escuchando" la *shinyapp* de modo que vamos a ver en nuestra consola un mensaje tipo `Listening on http://127.0.0.1:7654`. Una vez que hayamos terminado de trabajar con el GUI *debemos cerrar este proceso para poder seguir usando R*. 
+
+> You can stop the app and return access to the console using any one of these options:
+
+> * Click the stop sign icon on the R console toolbar.
+> * Click on the console, then press Esc (or press Ctrl + C if you’re not using RStudio).
+> * Close the Shiny app window.
+
+Más info sobre esto acá: <https://mastering-shiny.org/basic-app.html#running>
+
+
+## Usar mincaqdasr sin R
+
+El GUI está pensado para correr de manera autónoma, de modo que se puede utilizar sin llamarlo desde R, ni instalar todo el package. En cuyo caso, sólo hay que descargar la carpeta `\inst` que tiene 3 archivos llamados "gui" (`.html`, `.js`, `.css`) y 2 `.json` de ejemplo. 
+
+Para correr el GUI hay que abrir el archivo `inst/gui.html` con un navegador que tenga JavaScript habilitado. Los documentos y códigos de anotación se pueden incluir directamente dentro del `<script></script>`, en una variable llamada `input_data`. En el .html ya hay un ejemplo comentado que se puede editar. 
+
+
+## Estructura de datos
 
 Los datos se guardan en `.json` que incluye 4 elementos primarios:
 
@@ -60,37 +90,8 @@ Otro ejemplo de `.json` es sobre fragmentos de noticias de la prensa argentina a
 mincaqdas permite que un corpus se puede anotar en ambos niveles (documentos y fragmentos).
 
 
-## Instalación
+## Ejemplos en R
 
-Se puede instalar desde [GitHub](https://github.com/):
-
-``` r
-# install.packages("devtools")
-devtools::install_github("gastonbecerra/mincaqdasr")
-```
-
-## Usar mincaqdasr en R
-
-Cuando llamamos a `mincaqdasr::start_gui()` estamos abriendo un `.html` adentro de una *shinyapp* (no es la mejor implementación, pero es rápida; lo mejor sería abrir el navegador sin llamar una shinyapp). 
-
-Esto significa que R queda "escuchando" la *shinyapp* de modo que vamos a ver en nuestra consola un mensaje tipo `Listening on http://127.0.0.1:7654`. Una vez que hayamos terminado de trabajar con el GUI *debemos cerrar este proceso para poder seguir usando R*. 
-
-> You can stop the app and return access to the console using any one of these options:
-
-> * Click the stop sign icon on the R console toolbar.
-> * Click on the console, then press Esc (or press Ctrl + C if you’re not using RStudio).
-> * Close the Shiny app window.
-
-Más info sobre esto acá: <https://mastering-shiny.org/basic-app.html#running>
-
-
-## Usar mincaqdasr sin R
-
-El GUI está pensado para correr de manera autónoma, de modo que se puede utilizar sin llamarlo desde R, ni instalar todo el package. En cuyo caso, sólo hay que descargar la carpeta `\inst` que tiene 3 archivos llamados "gui" (`.html`, `.js`, `.css`) y 2 `.json` de ejemplo. 
-
-Para correr el GUI hay que abrir el archivo `inst/gui.html` con un navegador que tenga JavaScript habilitado. Los documentos y códigos de anotación se pueden incluir directamente dentro del `<script></script>`, en una variable llamada `input_data`. En el .html ya hay un ejemplo comentado que se puede editar. 
-
-## Ejemplos
 
 ```{r}
 

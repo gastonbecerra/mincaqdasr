@@ -36,7 +36,50 @@ data*. Los `.json` se pueden importar en R con `jsonlite::read_json()`.
 
 El GUI también se puede usar sin R [Ver Usar GUI sin R](#usar-gui-sin-r)
 
-# Estructura de datos
+## Usar mincaqdasr en R
+
+Se puede instalar desde [GitHub](https://github.com/):
+
+``` r
+# install.packages("devtools")
+devtools::install_github("gastonbecerra/mincaqdasr")
+```
+
+Cuando llamamos a `mincaqdasr::start_gui()` estamos abriendo un `.html`
+adentro de una *shinyapp* (no es la mejor implementación, pero es
+rápida; lo mejor sería abrir el navegador sin llamar una shinyapp).
+
+Esto significa que R queda “escuchando” la *shinyapp* de modo que vamos
+a ver en nuestra consola un mensaje tipo
+`Listening on http://127.0.0.1:7654`. Una vez que hayamos terminado de
+trabajar con el GUI *debemos cerrar este proceso para poder seguir
+usando R*.
+
+> You can stop the app and return access to the console using any one of
+> these options:
+
+> - Click the stop sign icon on the R console toolbar.
+> - Click on the console, then press Esc (or press Ctrl + C if you’re
+>   not using RStudio).
+> - Close the Shiny app window.
+
+Más info sobre esto acá:
+<https://mastering-shiny.org/basic-app.html#running>
+
+## Usar mincaqdasr sin R
+
+El GUI está pensado para correr de manera autónoma, de modo que se puede
+utilizar sin llamarlo desde R, ni instalar todo el package. En cuyo
+caso, sólo hay que descargar la carpeta `\inst` que tiene 3 archivos
+llamados “gui” (`.html`, `.js`, `.css`) y 2 `.json` de ejemplo.
+
+Para correr el GUI hay que abrir el archivo `inst/gui.html` con un
+navegador que tenga JavaScript habilitado. Los documentos y códigos de
+anotación se pueden incluir directamente dentro del `<script></script>`,
+en una variable llamada `input_data`. En el .html ya hay un ejemplo
+comentado que se puede editar.
+
+## Estructura de datos
 
 Los datos se guardan en `.json` que incluye 4 elementos primarios:
 
@@ -92,52 +135,7 @@ utiliza en este tutorial[^3], donde se cita el corpus más amplio.
 mincaqdas permite que un corpus se puede anotar en ambos niveles
 (documentos y fragmentos).
 
-## Instalación
-
-Se puede instalar desde [GitHub](https://github.com/):
-
-``` r
-# install.packages("devtools")
-devtools::install_github("gastonbecerra/mincaqdasr")
-```
-
-## Usar mincaqdasr en R
-
-Cuando llamamos a `mincaqdasr::start_gui()` estamos abriendo un `.html`
-adentro de una *shinyapp* (no es la mejor implementación, pero es
-rápida; lo mejor sería abrir el navegador sin llamar una shinyapp).
-
-Esto significa que R queda “escuchando” la *shinyapp* de modo que vamos
-a ver en nuestra consola un mensaje tipo
-`Listening on http://127.0.0.1:7654`. Una vez que hayamos terminado de
-trabajar con el GUI *debemos cerrar este proceso para poder seguir
-usando R*.
-
-> You can stop the app and return access to the console using any one of
-> these options:
-
-> - Click the stop sign icon on the R console toolbar.
-> - Click on the console, then press Esc (or press Ctrl + C if you’re
->   not using RStudio).
-> - Close the Shiny app window.
-
-Más info sobre esto acá:
-<https://mastering-shiny.org/basic-app.html#running>
-
-## Usar mincaqdasr sin R
-
-El GUI está pensado para correr de manera autónoma, de modo que se puede
-utilizar sin llamarlo desde R, ni instalar todo el package. En cuyo
-caso, sólo hay que descargar la carpeta `\inst` que tiene 3 archivos
-llamados “gui” (`.html`, `.js`, `.css`) y 2 `.json` de ejemplo.
-
-Para correr el GUI hay que abrir el archivo `inst/gui.html` con un
-navegador que tenga JavaScript habilitado. Los documentos y códigos de
-anotación se pueden incluir directamente dentro del `<script></script>`,
-en una variable llamada `input_data`. En el .html ya hay un ejemplo
-comentado que se puede editar.
-
-## Ejemplos
+## Ejemplos en R
 
 ``` r
 
@@ -185,15 +183,14 @@ fathers <- mincaqdasr::sample_haitian_fathers_annotated # usemos un ejemplo ya i
 
 get_fragments_annotations(fathers) # devuelve una tibble
 #> # A tibble: 5 × 10
-#>   fragment_id fragment   code_id code  docum…¹ start   end memo  annot…² annot…³
-#>   <chr>       <chr>        <dbl> <chr>   <int> <int> <int> <chr> <chr>   <chr>  
-#> 1 l3ttn9p8    the first…       0 Some…       0    12   295 Bein… 2023-0… defaul…
-#> 2 5zfi0ja8    I was sca…       0 Some…       1    92   374 Fath… 2023-0… defaul…
-#> 3 0arcod8v    Fortunate…       1 Usin…       1   376   524 One’… 2023-0… defaul…
-#> 4 2489nots    my father…       1 Usin…       2   107   220 Expr… 2023-0… defaul…
-#> 5 cywladwy    Yes, yes …       1 Usin…       5     3   238 C ad… 2023-0… defaul…
-#> # … with abbreviated variable names ¹​document_id, ²​annotation_update,
-#> #   ³​annotation_user
+#>   fragment_id fragment               code_id code  document_id start   end memo 
+#>   <chr>       <chr>                    <dbl> <chr>       <int> <int> <int> <chr>
+#> 1 l3ttn9p8    the first time I thou…       0 Some…           0    12   295 Bein…
+#> 2 5zfi0ja8    I was scared to becom…       0 Some…           1    92   374 Fath…
+#> 3 0arcod8v    Fortunately, I had my…       1 Usin…           1   376   524 One’…
+#> 4 2489nots    my father was a very …       1 Usin…           2   107   220 Expr…
+#> 5 cywladwy    Yes, yes when I think…       1 Usin…           5     3   238 C ad…
+#> # ℹ 2 more variables: annotation_update <chr>, annotation_user <chr>
 ```
 
 <!--
