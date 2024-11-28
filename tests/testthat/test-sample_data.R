@@ -41,3 +41,10 @@ test_that("get_fragments_annotations returning a non empty tibble", {
   expect_true(mincaqdasr::get_fragments_annotations( mincaqdasr::sample_haitian_fathers_annotated ) %>% tibble::is_tibble())
   expect_true(mincaqdasr::get_fragments_annotations( mincaqdasr::sample_haitian_fathers_annotated ) %>% nrow() > 1)
 })
+
+# test_that("The gui.js file is correctly copied", {
+#   installed_path <- system.file("gui.js", package = "mincaqsdar")
+#   development_path <- "inst/gui.js"
+#   expect_true(file.exists(installed_path) || file.exists(development_path),
+#               info = "The gui.js file should be present")
+# })
